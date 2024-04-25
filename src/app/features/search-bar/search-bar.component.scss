@@ -1,0 +1,29 @@
+.app-search-bar {
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  width: 90vw;
+  height: 6vh;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1);
+
+  .input {
+    width: 90%;
+    height: 100%;
+    border: none;
+    &[type='text'] {
+      background-color: transparent;
+    }
+  }
+
+  .icon {
+    width: 5%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: gray;
+  }
+}
