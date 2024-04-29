@@ -1,0 +1,40 @@
+.main-container {
+  display: flex;
+  width: 90vw;
+  row-gap: 0.5rem;
+  .content-container {
+    display: inherit;
+    flex-direction: inherit;
+    row-gap: 1rem;
+    &.list {
+      display: flex;
+      flex-direction: column;
+      row-gap: 1rem;
+    }
+    &.tiles {
+      display: flex;
+      flex-wrap: wrap;
+
+      justify-content: start;
+      column-gap: 1rem;
+      row-gap: 1rem;
+    }
+  }
+  .table-header {
+    display: flex;
+    justify-content: space-around;
+    font-weight: 500;
+  }
+}
+
+span {
+  width: 20%;
+  text-align: start;
+  cursor: pointer;
+  user-select: none;
+
+  &:nth-child(2) {
+    text-align: center;
+    margin-right: 50%;
+  }
+}

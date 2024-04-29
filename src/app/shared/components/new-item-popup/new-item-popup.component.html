@@ -1,0 +1,48 @@
+<div class="popup-container" [class.hidden]="this.isHidden">
+  <div class="form-container">
+    <div class="title-container">
+      <span> Create New </span> <button (click)="closePopup()"></button>
+    </div>
+    <div class="form-container">
+      <div class="input-container">
+        <label for="name">Name *</label>
+        <input
+          (keypress)="inputChange($event)"
+          class="name-input"
+          type="text"
+          id="name"
+          placeholder="Type tag name... REQUIRED"
+        />
+      </div>
+      <div class="input-container">
+        <label requ for="color">Color</label>
+        <input
+          (change)="inputChange($event)"
+          class="color-input"
+          type="color"
+          id="color"
+        />
+      </div>
+    </div>
+    <div class="desctiption-field-container">
+      <label for="description">Tag description *</label>
+      <textarea
+        (keypress)="inputChange($event)"
+        class="description-input"
+        id="description"
+        placeholder="Type tag description... REQUIRED"
+      ></textarea>
+    </div>
+  </div>
+  <div class="buttons-container">
+    <button class="cancel-button" (click)="cancle()">Cancel</button>
+    <button
+      class="save-button"
+      disabled
+      [disabled]="!(this.item?.name && this.item?.description)"
+      (click)="save()"
+    >
+      save
+    </button>
+  </div>
+</div>

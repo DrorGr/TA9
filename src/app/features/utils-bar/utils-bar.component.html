@@ -1,0 +1,28 @@
+<div class="utils-container">
+  <p>Managment Tool</p>
+  <div>
+    <button (click)="setView('Tiles')">
+      <img
+        role="button"
+        src="../../../assets/images/Tiles Mode.svg"
+        alt="Tiles View"
+        [class.active]="this.getView().value === 'Tiles'"
+      />
+    </button>
+    <button (click)="setView('List')">
+      <img
+        role="button"
+        src="../../../assets/images/List Mode.svg"
+        alt="List View"
+        [class.active]="this.getView().value === 'List'"
+      />
+    </button>
+    <button (click)="openAddItemPopup()">
+      <img
+        role="button"
+        src="../../../assets/images/Create New.svg"
+        alt="Create New"
+      />
+    </button>
+  </div>
+</div>

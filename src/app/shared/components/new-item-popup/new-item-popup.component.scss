@@ -1,0 +1,119 @@
+.popup-container {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  gap: 45vh;
+  top: 0;
+  right: 0;
+  width: 30vw;
+  height: 100vh;
+  background-color: #fafafa;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  opacity: 1;
+
+  &.hidden {
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+    z-index: -1;
+  }
+
+  .form-container {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 30%;
+    .title-container {
+      width: 25vw;
+      display: flex;
+      justify-content: space-between;
+    }
+    .form-container {
+      width: 25vw;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      .input-container {
+        display: flex;
+        flex-direction: column;
+        .color-input input {
+          height: 3vh;
+        }
+        .name-input {
+          width: 20vw;
+          height: 3vh;
+        }
+      }
+    }
+    .desctiption-field-container {
+      width: 25vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .description-input {
+        height: 10vh;
+      }
+    }
+  }
+  .buttons-container {
+    width: 25vw;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 20px;
+
+    button {
+      width: 20%;
+      border: #a3a3a3 solid 1px;
+      height: 5vh;
+      height: 5vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+    .cancel-button {
+      background-color: #f9f9f9;
+      border: #a3a3a3 solid 1px;
+      color: #a3a3a3;
+    }
+    .save-button {
+      background-color: #34cc80;
+      border: none;
+      color: #fff;
+      &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+    }
+  }
+}
+
+input,
+textarea {
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1);
+  background-color: white;
+  resize: none;
+  font-size: 1rem;
+  &:focus {
+    outline: none;
+  }
+}
+
+label {
+  font-size: 0.8rem;
+  margin-bottom: 5px;
+  font-weight: 400;
+}

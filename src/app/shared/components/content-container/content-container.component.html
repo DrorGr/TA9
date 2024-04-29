@@ -1,0 +1,65 @@
+<div class="main-container" *ngIf="listItems" [ngSwitch]="this.viewState">
+  <div *ngSwitchCase="'List'">
+    <div class="table-header">
+      <span (click)="sortItems('color', sortType === 'color' ? true : false)"
+        >Color
+        {{
+          sortType === 'color' ? (!this.reverse ? '&darr;' : '&uarr;') : ''
+        }}</span
+      >
+      <span (click)="sortItems('name', sortType === 'name' ? true : false)"
+        >Name
+        {{
+          sortType === 'name' ? (!this.reverse ? '&darr;' : '&uarr;') : ''
+        }}</span
+      >
+      <span
+        (click)="
+          sortItems('createDate', sortType === 'createDate' ? true : false)
+        "
+        >Create Date
+        {{
+          sortType === 'createDate' ? (!this.reverse ? '&darr;' : '&uarr;') : ''
+        }}</span
+      >
+      <span
+        (click)="
+          sortItems(
+            'lastUpdateDate',
+            sortType === 'lastUpdateDate' ? true : false
+          )
+        "
+        >Last Update Date
+        {{
+          sortType === 'lastUpdateDate'
+            ? !this.reverse
+              ? '&darr;'
+              : '&uarr;'
+            : ''
+        }}</span
+      >
+      <span
+        (click)="
+          sortItems('createdBy', sortType === 'createdBy' ? true : false)
+        "
+        >Created By
+        {{
+          sortType === 'createdBy' ? (!this.reverse ? '&darr;' : '&uarr;') : ''
+        }}</span
+      >
+    </div>
+    <div class="content-container list">
+      <ng-container *ngFor="let item of listItems">
+        <app-list-item [item]="item"></app-list-item>
+      </ng-container>
+    </div>
+  </div>
+  <div *ngSwitchCase="'Tiles'">
+    <div class="content-container tiles">
+      <ng-container *ngFor="let item of listItems">
+        <app-tile-item [item]="item" />
+      </ng-container>
+    </div>
+    <app-tile-item />
+  </div>
+</div>

@@ -1,0 +1,36 @@
+.url-search-bar {
+  display: flex;
+  justify-content: start;
+  flex-direction: row;
+  align-items: center;
+  width: 90vw;
+  height: 5vh;
+  gap: 1rem;
+  background-color: transparent;
+
+  .input {
+    height: 100%;
+    width: 20%;
+    border: none;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1);
+    &[type='text'] {
+      background-color: #ffffff;
+    }
+  }
+
+  .button {
+    background-color: #007af9;
+    color: #fff;
+    border: none;
+    height: 100%;
+    width: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      background-color: #0078f998;
+    }
+  }
+}

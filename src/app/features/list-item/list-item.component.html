@@ -1,0 +1,16 @@
+<div *ngIf="item" class="list-item">
+  <span class="color">
+    <div
+      class="color-box"
+      [ngStyle]="{ 'background-color': this.item.color }"
+    ></div>
+  </span>
+  <span class="name">{{ this.item.name }}</span>
+  <span class="create-date">{{
+    this.item.createDate | date : 'dd/MM/yyyy'
+  }}</span>
+  <span class="last-update">{{
+    this.item.lastUpdateDate | date : 'dd/MM/yyyy'
+  }}</span>
+  <span class="created-by">{{ this.item.createdBy }}</span>
+</div>

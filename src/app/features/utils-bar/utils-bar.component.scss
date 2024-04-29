@@ -1,0 +1,28 @@
+button {
+  border: none;
+  img,
+  svg {
+    width: 22px;
+    height: auto;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      cursor: pointer;
+      opacity: 0.5;
+    }
+
+    &.active {
+      filter: drop-shadow(0 0 0.35rem #0078f981);
+    }
+  }
+}
+
+.utils-container {
+  width: 90vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #356c86;
+  font-size: 1rem;
+  font-weight: 500;
+}

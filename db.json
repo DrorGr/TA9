@@ -1,0 +1,148 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "color": "blue",
+      "name": "Item 1",
+      "description": "This is a description of the item.",
+      "createDate": "2022-01-01T00:00:00.000Z",
+      "lastUpdateDate": "2022-01-01T00:00:00.000Z",
+      "createdBy": "User 1"
+    },
+    {
+      "id": 2,
+      "color": "red",
+      "name": "Item 1",
+      "description": "This is a description of the item.",
+      "createDate": "2022-01-01T00:00:00.000Z",
+      "lastUpdateDate": "2022-01-01T00:00:00.000Z",
+      "createdBy": "User 1"
+    },
+    {
+      "id": 3,
+      "color": "red",
+      "name": "Item 1",
+      "description": "This is a description of the item.",
+      "createDate": "2022-01-01T00:00:00.000Z",
+      "lastUpdateDate": "2022-01-01T00:00:00.000Z",
+      "createdBy": "User 1"
+    },
+    {
+      "id": 4,
+      "color": "red",
+      "name": "Item 1",
+      "description": "This is a description of the item.",
+      "createDate": "2022-01-01T00:00:00.000Z",
+      "lastUpdateDate": "2022-01-01T00:00:00.000Z",
+      "createdBy": "User 1"
+    },
+    {
+      "id": 5,
+      "color": "blue",
+      "name": "Item 1",
+      "description": "This is a description of the item.",
+      "createDate": "2022-01-01T00:00:00.000Z",
+      "lastUpdateDate": "2022-01-01T00:00:00.000Z",
+      "createdBy": "User 1"
+    },
+    {
+      "id": 6,
+      "color": "red",
+      "name": "Item 1",
+      "description": "This is a description of the item.",
+      "createDate": "2022-01-01T00:00:00.000Z",
+      "lastUpdateDate": "2022-01-01T00:00:00.000Z",
+      "createdBy": "User 1"
+    },
+    {
+      "id": 7,
+      "color": "red",
+      "name": "Item 1",
+      "description": "This is a description of the item.",
+      "createDate": "2022-01-01T00:00:00.000Z",
+      "lastUpdateDate": "2022-01-01T00:00:00.000Z",
+      "createdBy": "User 1"
+    },
+    {
+      "id": 8,
+      "color": "red",
+      "name": "Item 1",
+      "description": "This is a description of the item.",
+      "createDate": "2022-01-01T00:00:00.000Z",
+      "lastUpdateDate": "2022-01-01T00:00:00.000Z",
+      "createdBy": "User 1"
+    },
+    {
+      "id": 1,
+      "name": "as",
+      "color": "'#000000'",
+      "description": "as",
+      "createDate": "2024-04-29T16:43:22.487Z",
+      "lastUpdateDate": "2024-04-29T16:43:22.487Z",
+      "createdBy": ""
+    },
+    {
+      "id": 1,
+      "name": "as",
+      "color": "'#000000'",
+      "description": "as",
+      "createDate": "2024-04-29T16:43:22.487Z",
+      "lastUpdateDate": "2024-04-29T16:43:22.487Z",
+      "createdBy": ""
+    },
+    {
+      "id": 1,
+      "name": "asdas",
+      "color": "'#000000'",
+      "description": "zxczx",
+      "createDate": "2024-04-29T16:44:43.516Z",
+      "lastUpdateDate": "2024-04-29T16:44:43.516Z",
+      "createdBy": ""
+    },
+    {
+      "id": 1,
+      "name": "as",
+      "color": "'#FFF'",
+      "description": "as",
+      "createDate": "2024-04-29T16:59:24.376Z",
+      "lastUpdateDate": "2024-04-29T16:59:24.376Z",
+      "createdBy": ""
+    },
+    {
+      "id": 1,
+      "name": "asdas",
+      "color": "green",
+      "description": "asdas",
+      "createDate": "2024-04-29T17:01:23.559Z",
+      "lastUpdateDate": "2024-04-29T17:01:23.559Z",
+      "createdBy": ""
+    },
+    {
+      "id": 1,
+      "name": "as",
+      "color": "",
+      "description": "as",
+      "createDate": "2024-04-29T17:09:28.563Z",
+      "lastUpdateDate": "2024-04-29T17:09:28.563Z",
+      "createdBy": ""
+    },
+    {
+      "id": 1,
+      "name": "asdas",
+      "color": "#e01f1f",
+      "description": "asdas",
+      "createDate": "2024-04-29T17:10:15.647Z",
+      "lastUpdateDate": "2024-04-29T17:10:15.647Z",
+      "createdBy": ""
+    },
+    {
+      "id": 1,
+      "name": "as",
+      "color": "#666666",
+      "description": "as",
+      "createDate": "2024-04-29T17:10:49.685Z",
+      "lastUpdateDate": "2024-04-29T17:10:49.685Z",
+      "createdBy": ""
+    }
+  ]
+}

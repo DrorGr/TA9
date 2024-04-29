@@ -1,7 +1,10 @@
 @use '../../../utils/variables' as variables;
 
 .layout-container {
-  background-color: variables.$layoutBackgroundColor;
-  height: 100vh;
+  height: 85vh;
   width: 100vw;
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
