@@ -19,7 +19,7 @@ export class MasterService {
     return this.http.put('http://localhost:3000/items' + item.id, item)
   }
   DeleteItem(id: number) {
-    return this.http.delete('http://localhost:3000/items' + id)
+    return this.http.delete('http://localhost:3000/items/' + id)
   }
 
   haveaccess() {

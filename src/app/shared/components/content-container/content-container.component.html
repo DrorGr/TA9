@@ -1,4 +1,8 @@
-<div class="main-container" *ngIf="listItems" [ngSwitch]="this.viewState">
+<div
+  class="main-container"
+  *ngIf="listItems.length > 0; else other_content"
+  [ngSwitch]="this.viewState"
+>
   <div *ngSwitchCase="'List'">
     <div class="table-header">
       <span (click)="sortItems('color', sortType === 'color' ? true : false)"
@@ -49,17 +53,45 @@
       >
     </div>
     <div class="content-container list">
-      <ng-container *ngFor="let item of listItems">
-        <app-list-item [item]="item"></app-list-item>
+      <ng-container *ngFor="let item of paginate()">
+        <app-list-item
+          (deleteClick)="deleteItem(this.item)"
+          [item]="item"
+          (click)="editItem(this.item)"
+        ></app-list-item>
       </ng-container>
     </div>
   </div>
   <div *ngSwitchCase="'Tiles'">
     <div class="content-container tiles">
-      <ng-container *ngFor="let item of listItems">
+      <ng-container *ngFor="let item of paginate()">
         <app-tile-item [item]="item" />
       </ng-container>
     </div>
     <app-tile-item />
   </div>
 </div>
+<div class="pagination">
+  <button
+    (click)="paginate('prev')"
+    [disabled]="currentPage === 1"
+    class="pagination"
+  >
+    Prev
+  </button>
+  {{ currentPage }} /
+  {{ (this.listItems.length / this.pagination.rows).toFixed() }}
+  <button
+    (click)="paginate('next')"
+    [disabled]="
+      (this.listItems.length / this.pagination.rows).toFixed() ===
+      currentPage.toString()
+    "
+    class="pagination"
+  >
+    Next
+  </button>
+</div>
+<ng-template #other_content
+  >No resaults... clear search input or call Dror
+</ng-template>
