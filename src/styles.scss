@@ -1,5 +1,5 @@
 @use '@angular/material' as mat;
-@use './app/utils/variables.scss';
+@import './app/utils/variables.scss';
 
 html,
 body {
@@ -7,7 +7,7 @@ body {
   width: 100%;
   top: 0;
   left: 0;
-  background-color: #f2f6f9;
+  background-color: $layoutBackgroundColor;
 }
 body {
   margin: 0;
@@ -18,4 +18,7 @@ input {
   &:focus {
     outline: none;
   }
+}
+* {
+  text-overflow: clip;
 }

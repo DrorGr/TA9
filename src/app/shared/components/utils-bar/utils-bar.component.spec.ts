@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing'
-
 import { UtilsBarComponent } from './utils-bar.component'
 
 describe('UtilsBarComponent', () => {
@@ -8,15 +7,29 @@ describe('UtilsBarComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [UtilsBarComponent],
+      declarations: [UtilsBarComponent],
     }).compileComponents()
+  })
 
+  beforeEach(() => {
     fixture = TestBed.createComponent(UtilsBarComponent)
     component = fixture.componentInstance
     fixture.detectChanges()
   })
 
-  it('should create', () => {
+  it('should create the component', () => {
     expect(component).toBeTruthy()
+  })
+
+  it('should set the view', () => {
+    const view = 'example view'
+    component.setView(view)
+    expect(component.getView().value).toBe(view)
+  })
+
+  it('should open the add item popup', () => {
+    spyOn(window, 'open')
+    component.openAddItemPopup()
+    expect(window.open).toHaveBeenCalled()
   })
 })

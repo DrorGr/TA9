@@ -1,3 +1,5 @@
+@import '../../../utils/variables';
+
 .url-search-bar {
   display: flex;
   justify-content: start;
@@ -20,8 +22,8 @@
   }
 
   .button {
-    background-color: #007af9;
-    color: #fff;
+    background-color: $urlButtonColor;
+    color: $white;
     border: none;
     height: 100%;
     width: 5%;
@@ -31,7 +33,7 @@
     cursor: pointer;
     transition: all 0.3s ease-in-out;
     &:hover {
-      background-color: #0078f998;
+      background-color: $urlButtonHoverColor;
     }
   }
 }

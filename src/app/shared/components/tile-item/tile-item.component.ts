@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core'
 import { CommonModule } from '@angular/common'
-import { Item } from '../../_models/item'
+import { Item } from '../../../_models/item'
 
 @Component({
   selector: 'app-tile-item',

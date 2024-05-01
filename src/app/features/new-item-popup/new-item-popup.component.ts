@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core'
-import { UtilsBarComponentService } from '../utils-bar/utils-bar.component.service'
+import { UtilsBarComponentService } from '../../shared/components/utils-bar/utils-bar.component.service'
 import { Item } from '../../_models/item'
 import { addItem, loadItem } from '../../store/items/items.actions'
 import { geItemsList } from '../../store/items/items.selector'
@@ -59,7 +59,7 @@ export class NewItemPopupComponent implements OnInit {
     this.closePopup()
   }
 
-  ongOnDestroy() {
+  ngOnDestroy() {
     UtilsBarComponentService.getIsAddItemPopupOpen().unsubscribe()
   }
 }

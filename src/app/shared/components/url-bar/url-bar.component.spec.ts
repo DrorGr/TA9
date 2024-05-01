@@ -1,23 +1,25 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing'
+import { UrlBarComponent } from './url-bar.component'
 
-import { UrlBarComponent } from './url-bar.component';
-
-describe('UrtBarComponent', () => {
-  let component: UrlBarComponent;
-  let fixture: ComponentFixture<UrlBarComponent>;
+describe('UrlBarComponent', () => {
+  let component: UrlBarComponent
+  let fixture: ComponentFixture<UrlBarComponent>
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [UrlBarComponent]
-    })
-    .compileComponents();
-    
-    fixture = TestBed.createComponent(UrlBarComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+      declarations: [UrlBarComponent],
+    }).compileComponents()
+  })
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+  beforeEach(() => {
+    fixture = TestBed.createComponent(UrlBarComponent)
+    component = fixture.componentInstance
+    fixture.detectChanges()
+  })
+
+  it('should create the component', () => {
+    expect(component).toBeTruthy()
+  })
+
+  // Add more tests here as needed
+})

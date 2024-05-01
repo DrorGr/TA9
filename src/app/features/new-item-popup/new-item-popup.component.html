@@ -1,7 +1,8 @@
 <div class="popup-container" [class.hidden]="this.isHidden">
   <div class="form-container">
     <div class="title-container">
-      <span> Create New </span> <button (click)="closePopup()"></button>
+      <span> Create New </span>
+      <button class="close-button" (click)="closePopup()">X</button>
     </div>
     <div class="form-container">
       <div class="input-container">

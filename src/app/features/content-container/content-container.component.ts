@@ -22,8 +22,8 @@ export class ContentContainerComponent implements OnInit {
     private SearchBarService: SearchBarService,
   ) {}
 
+  @Input() listItems!: Item[]
   searchValue: string = ''
-  listItems!: Item[]
   viewState: string = 'List'
   sortType: string = 'createDate'
   reverse: boolean = false
@@ -65,7 +65,7 @@ export class ContentContainerComponent implements OnInit {
 
   sortItems(by: string, reverse: boolean) {
     this.sortType = by
-    this.reverse = !reverse
+    this.reverse = reverse
 
     switch (by) {
       case 'name':
@@ -123,6 +123,7 @@ export class ContentContainerComponent implements OnInit {
       default:
         break
     }
+    this.reverse = false
   }
 
   deleteItem(item: Item) {
@@ -155,6 +156,7 @@ export class ContentContainerComponent implements OnInit {
       this.listItems = this.listItems.filter(item =>
         item.name.toLowerCase().startsWith(searchValue.toLowerCase()),
       )
+      this.paginate(null, this.viewState)
     } else {
       this.loadInitialData()
     }

@@ -1,3 +1,5 @@
+@import '../../../utils/variables';
+
 .app-search-bar {
   background-color: #fff;
   display: flex;
@@ -24,6 +26,6 @@
     justify-content: center;
     align-items: center;
     font-size: 30px;
-    color: gray;
+    color: $gray;
   }
 }

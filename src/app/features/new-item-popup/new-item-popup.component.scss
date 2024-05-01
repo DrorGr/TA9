@@ -1,3 +1,5 @@
+@import '../../utils/variables';
+
 .popup-container {
   display: flex;
   justify-content: space-around;
@@ -9,10 +11,10 @@
   right: 0;
   width: 30vw;
   height: 100vh;
-  background-color: #fafafa;
+  background-color: $popupBackgroundColor;
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1);
-  z-index: 100;
   opacity: 1;
+  z-index: 100;
 
   &.hidden {
     transition: all 0.3s ease-in-out;
@@ -69,7 +71,7 @@
 
     button {
       width: 20%;
-      border: #a3a3a3 solid 1px;
+      border: $buttonBorder solid 1px;
       height: 5vh;
       height: 5vh;
       display: flex;
@@ -83,18 +85,36 @@
       }
     }
     .cancel-button {
-      background-color: #f9f9f9;
-      border: #a3a3a3 solid 1px;
-      color: #a3a3a3;
+      background-color: $cancelButtonColor;
+      border: $buttonBorder solid 1px;
+      color: $buttonBorder;
     }
     .save-button {
-      background-color: #34cc80;
+      background-color: $saveButtonColor;
       border: none;
       color: #fff;
       &:disabled {
         opacity: 0.5;
         cursor: not-allowed;
       }
+    }
+  }
+  .close-button {
+    position: absolute;
+    font-size: 1.3rem;
+    top: 35px;
+    right: 20px;
+    width: 5vh;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      opacity: 0.5;
     }
   }
 }
@@ -104,7 +124,7 @@ textarea {
   border-radius: 5px;
   border: none;
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1);
-  background-color: white;
+  background-color: $white;
   resize: none;
   font-size: 1rem;
   &:focus {
@@ -114,6 +134,10 @@ textarea {
 
 label {
   font-size: 0.8rem;
-  margin-bottom: 5px;
+  margin-bottom: 6px;
   font-weight: 400;
+}
+
+* {
+  font-family: 'Roboto', sans-serif;
 }
