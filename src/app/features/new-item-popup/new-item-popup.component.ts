@@ -1,8 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core'
-import { UtilsBarComponentService } from '../../../features/utils-bar/utils-bar.component.service'
-import { Item } from '../../../_models/item'
-import { addItem, loadItem } from '../../../store/items/items.actions'
-import { geItemsList } from '../../../store/items/items.selector'
+import { UtilsBarComponentService } from '../utils-bar/utils-bar.component.service'
+import { Item } from '../../_models/item'
+import { addItem, loadItem } from '../../store/items/items.actions'
+import { geItemsList } from '../../store/items/items.selector'
 import { CommonModule } from '@angular/common'
 import { Store } from '@ngrx/store'
 
@@ -34,7 +34,7 @@ export class NewItemPopupComponent implements OnInit {
       description: '',
       createDate: new Date(),
       lastUpdateDate: new Date(),
-      createdBy: '',
+      createdBy: 'Logged in user',
     }
   }
 

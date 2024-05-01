@@ -1,7 +1,7 @@
 import { Component } from '@angular/core'
 import { RouterOutlet } from '@angular/router'
-import { LayoutComponent } from '../app/shared/components/layout/layout.component'
-import { NewItemPopupComponent } from '../app/shared/components/new-item-popup/new-item-popup.component'
+import { LayoutComponent } from './features/layout/layout.component'
+import { NewItemPopupComponent } from './features/new-item-popup/new-item-popup.component'
 import { CommonModule } from '@angular/common'
 import { HttpClientModule } from '@angular/common/http'
 

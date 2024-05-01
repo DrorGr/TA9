@@ -53,44 +53,43 @@
       >
     </div>
     <div class="content-container list">
-      <ng-container *ngFor="let item of paginate()">
+      <ng-container *ngFor="let item of paginate('List')">
         <app-list-item
           (deleteClick)="deleteItem(this.item)"
           [item]="item"
-          (click)="editItem(this.item)"
         ></app-list-item>
       </ng-container>
     </div>
   </div>
   <div *ngSwitchCase="'Tiles'">
     <div class="content-container tiles">
-      <ng-container *ngFor="let item of paginate()">
+      <ng-container *ngFor="let item of paginate('Tiles')">
         <app-tile-item [item]="item" />
       </ng-container>
     </div>
     <app-tile-item />
   </div>
-</div>
-<div class="pagination">
-  <button
-    (click)="paginate('prev')"
-    [disabled]="currentPage === 1"
-    class="pagination"
-  >
-    Prev
-  </button>
-  {{ currentPage }} /
-  {{ (this.listItems.length / this.pagination.rows).toFixed() }}
-  <button
-    (click)="paginate('next')"
-    [disabled]="
-      (this.listItems.length / this.pagination.rows).toFixed() ===
-      currentPage.toString()
-    "
-    class="pagination"
-  >
-    Next
-  </button>
+  <div class="pagination">
+    <button
+      (click)="paginate('prev')"
+      [disabled]="pagination.currentPage === 1"
+      class="paginationPrev"
+    >
+      Prev
+    </button>
+    {{ pagination.currentPage }} /
+    {{ (+this.listItems.length / +this.pagination.rows).toFixed() }}
+    <button
+      (click)="paginate('next')"
+      [disabled]="
+        (this.listItems.length / this.pagination.rows).toFixed() ===
+        this.pagination.currentPage.toString()
+      "
+      class="paginationNext"
+    >
+      Next
+    </button>
+  </div>
 </div>
 <ng-template #other_content
   >No resaults... clear search input or call Dror
