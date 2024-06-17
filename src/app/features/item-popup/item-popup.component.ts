@@ -2,7 +2,6 @@ import { Component, SimpleChanges, Input, OnChanges } from '@angular/core'
 import { UtilsBarComponentService } from '../../shared/components/utils-bar/utils-bar.component.service'
 import { Item } from '../../_models/item'
 import { addItem, loadItem, updateItem } from '../../store/items/items.actions'
-import { geItemsList } from '../../store/items/items.selector'
 import { CommonModule } from '@angular/common'
 import { Store } from '@ngrx/store'
 
@@ -21,7 +20,7 @@ export class NewItemPopupComponent {
   constructor(private store: Store) {
     UtilsBarComponentService.getIsAddItemPopupOpen().subscribe(value => {
       this.isHidden = !value
-
+      this.store.dispatch(loadItem())
       if (this.isHidden === false) {
         this.popupProps = UtilsBarComponentService.popupState.getValue()
         if (this.popupProps[0] === 'edit') {
@@ -38,17 +37,15 @@ export class NewItemPopupComponent {
         }
       }
     })
-    this.store.dispatch(loadItem())
   }
 
   closePopup() {
-    UtilsBarComponentService.setOpenAddItemPopup(false)
     this.store.dispatch(loadItem())
+    UtilsBarComponentService.setOpenAddItemPopup(false)
   }
 
   cancle() {
     this.closePopup()
-    this.store.dispatch(loadItem())
   }
 
   inputChange(event: any) {
@@ -63,9 +60,13 @@ export class NewItemPopupComponent {
       this.item.id = Math.floor(Math.random() * 100000)
       this.store.dispatch(addItem({ item: this.item }))
     } else {
-      this.store.dispatch(updateItem({ inputdata: this.item }))
     }
-    this.closePopup()
+
+    this.store.dispatch(updateItem({ inputdata: this.item }))
+    this.store.dispatch(loadItem())
+    setTimeout(() => {
+      this.closePopup()
+    }, 100)
   }
 
   ngOnDestroy() {

@@ -5,7 +5,12 @@ import { TileItemComponent } from '../../shared/components/tile-item/tile-item.c
 import { Store } from '@ngrx/store'
 import { UtilsBarComponentService } from '../../shared/components/utils-bar/utils-bar.component.service'
 import { Item } from '../../_models/item'
-import { deleteItem, loadItem } from '../../store/items/items.actions'
+import {
+  deleteItem,
+  emptyAction,
+  loadItem,
+  updateItem,
+} from '../../store/items/items.actions'
 import { geItemsList } from '../../store/items/items.selector'
 import { SearchBarService } from '../../shared/components/search-bar/search-bar.component.service'
 
@@ -22,7 +27,7 @@ export class ContentContainerComponent implements OnInit {
     private SearchBarService: SearchBarService,
   ) {}
 
-  listItems!: Item[]
+  listItems: Item[]
   originalListItems!: Item[]
   searchValue: string = ''
   viewState: string = 'List'
@@ -46,17 +51,12 @@ export class ContentContainerComponent implements OnInit {
       this.filterItems(value)
     })
     UtilsBarComponentService.getIsAddItemPopupOpen().subscribe(() => {
-      this.store.select(geItemsList).subscribe(item => {
-        console.log(item)
-        this.listItems = item
-        this.originalListItems = item
-        this.loadInitialData(true)
-      })
+      this.loadInitialData(true)
     })
   }
 
   loadInitialData(dontSort?: boolean) {
-    this.store.dispatch(loadItem())
+    // this.store.dispatch(loadItem())
     this.store.select(geItemsList).subscribe(item => {
       if (item) {
         this.listItems = item
@@ -145,7 +145,7 @@ export class ContentContainerComponent implements OnInit {
   }
 
   paginate(direction?: string, viewState?: string) {
-    !this.listItems ? this.loadInitialData() : null
+    !this.listItems ? this.loadInitialData(true) : null
     !viewState ? (viewState = this.viewState) : (this.viewState = viewState)
     this.pagination.rows = viewState === 'List' ? 8 : 20
     if (!direction) {
@@ -171,7 +171,7 @@ export class ContentContainerComponent implements OnInit {
       )
       this.paginate(null, this.viewState)
     } else {
-      this.loadInitialData()
+      this.loadInitialData(true)
     }
   }
 
