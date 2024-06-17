@@ -2,9 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing'
 import { ContentContainerComponent } from './content-container.component'
 import { Store } from '@ngrx/store'
 import { SearchBarService } from '../../shared/components/search-bar/search-bar.component.service'
-import { of } from 'rxjs'
 import { Item } from '../../_models/item'
-import { deleteItem, loadItem } from '../../store/items/items.actions'
 
 describe('ContentContainerComponent', () => {
   let component: ContentContainerComponent
@@ -59,11 +57,5 @@ describe('ContentContainerComponent', () => {
     expect(
       mockSearchBarService as jasmine.SpyObj<SearchBarService>,
     ).toHaveBeenCalledWith(searchValue)
-  })
-
-  it('should unsubscribe on component destroy', () => {
-    spyOn(component, 'ngOnDestroy')
-    component.ngOnDestroy()
-    expect(component.ngOnDestroy).toHaveBeenCalled()
   })
 })

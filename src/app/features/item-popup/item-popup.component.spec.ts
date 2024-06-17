@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing'
-import { NewItemPopupComponent } from './new-item-popup.component'
+import { NewItemPopupComponent } from './item-popup.component'
 import { Store } from '@ngrx/store'
 import { MockStore, provideMockStore } from '@ngrx/store/testing'
 import { Item } from '../../_models/item'

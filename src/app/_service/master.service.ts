@@ -16,7 +16,7 @@ export class MasterService {
     return this.http.post('http://localhost:3000/items', item)
   }
   UpdateItem(item: Item) {
-    return this.http.put('http://localhost:3000/items' + item.id, item)
+    return this.http.put('http://localhost:3000/items/' + item.id, item)
   }
   DeleteItem(id: number) {
     return this.http.delete('http://localhost:3000/items/' + id)

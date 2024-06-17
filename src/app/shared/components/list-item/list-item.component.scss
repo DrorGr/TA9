@@ -42,3 +42,14 @@ span {
     font-size: 1.3rem;
   }
 }
+.edit-button {
+  background-color: transparent;
+  border: none;
+  color: $urlButtonColor;
+  position: absolute;
+  font-size: 1rem;
+  right: 7%;
+  &:hover {
+    font-size: 1.3rem;
+  }
+}

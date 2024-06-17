@@ -36,24 +36,32 @@ export class ContentContainerComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.loadInitialData()
     UtilsBarComponentService.getViewState().subscribe((viewState: string) => {
       this.viewState = viewState
       this.paginate(null, viewState)
     })
-    this.loadInitialData()
 
     this.SearchBarService.getSearchValue().subscribe(value => {
       this.filterItems(value)
     })
+    UtilsBarComponentService.getIsAddItemPopupOpen().subscribe(() => {
+      this.store.select(geItemsList).subscribe(item => {
+        console.log(item)
+        this.listItems = item
+        this.originalListItems = item
+        this.loadInitialData(true)
+      })
+    })
   }
 
-  loadInitialData() {
+  loadInitialData(dontSort?: boolean) {
     this.store.dispatch(loadItem())
     this.store.select(geItemsList).subscribe(item => {
       if (item) {
         this.listItems = item
         this.originalListItems = item
-        this.sortItems('createDate', true)
+        dontSort && this.sortItems('createDate', true)
         this.pagination.totalRecords = this.listItems.length
       }
       if (
@@ -130,7 +138,10 @@ export class ContentContainerComponent implements OnInit {
 
   deleteItem(item: Item) {
     this.store.dispatch(deleteItem({ id: item.id as number }))
-    this.store.dispatch(loadItem())
+  }
+  editItem(item: Item) {
+    item = { ...item, lastUpdateDate: new Date() }
+    UtilsBarComponentService.editItem(item)
   }
 
   paginate(direction?: string, viewState?: string) {
@@ -166,5 +177,6 @@ export class ContentContainerComponent implements OnInit {
 
   ngOnDestroy() {
     UtilsBarComponentService.getViewState().unsubscribe()
+    this.SearchBarService.getSearchValue().unsubscribe()
   }
 }

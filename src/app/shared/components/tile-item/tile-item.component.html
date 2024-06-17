@@ -1,5 +1,5 @@
 <div *ngIf="item" class="list-item">
-  <div class="item-container">
+  <div class="item-container" (click)="onEditClick()">
     <div
       class="color-box"
       [ngStyle]="{ 'background-color': this.item.color || 'black' }"
