@@ -1,15 +1,6 @@
 {
   "items": [
     {
-      "id": "3798457",
-      "name": "Dror",
-      "color": "#ff7b00",
-      "description": "qweqweqw",
-      "createDate": "2024-06-15T14:27:48.630Z",
-      "lastUpdateDate": "2024-06-17T11:38:09.058Z",
-      "createdBy": "Logged in user"
-    },
-    {
       "id": "3798414",
       "name": "Dror",
       "color": "#000000",
@@ -40,9 +31,9 @@
       "id": "98763",
       "name": "התגעגעתי למחשב....",
       "color": "#4dc7ae",
-      "description": "טוב בסד",
+      "description": "די מילואים",
       "createDate": "2024-06-17T08:05:28.961Z",
-      "lastUpdateDate": "2024-06-17T08:05:28.961Z",
+      "lastUpdateDate": "2024-06-17T12:56:34.810Z",
       "createdBy": "Logged in user"
     },
     {
@@ -52,15 +43,6 @@
       "description": "פגים, פגים בכל מקו",
       "createDate": "2024-06-17T08:07:01.963Z",
       "lastUpdateDate": "2024-06-17T08:07:01.963Z",
-      "createdBy": "Logged in user"
-    },
-    {
-      "id": "73107",
-      "name": "Testinggggg",
-      "color": "#000000",
-      "description": "12 1",
-      "createDate": "2024-06-17T08:08:08.056Z",
-      "lastUpdateDate": "2024-06-17T08:08:08.056Z",
       "createdBy": "Logged in user"
     },
     {
@@ -82,15 +64,6 @@
       "createdBy": "Logged in user"
     },
     {
-      "id": "67191",
-      "name": "asdasd",
-      "color": "#000000",
-      "description": "asdas",
-      "createDate": "2024-06-17T09:58:51.851Z",
-      "lastUpdateDate": "2024-06-17T09:58:51.851Z",
-      "createdBy": "Logged in user"
-    },
-    {
       "id": "25278",
       "name": "123",
       "color": "#0affad",
@@ -102,55 +75,37 @@
     {
       "id": "31008",
       "name": "zxczxc",
-      "color": "#ee00ff",
+      "color": "#5c5c5c",
       "description": "zxczx",
       "createDate": "2024-06-17T10:26:53.979Z",
-      "lastUpdateDate": "2024-06-17T10:45:18.757Z",
+      "lastUpdateDate": "2024-06-17T12:53:10.924Z",
       "createdBy": "Logged in user"
     },
     {
-      "id": "75822",
-      "name": "Hay Mati",
-      "color": "#f00000",
-      "description": "Im Back!",
-      "createDate": "2024-06-17T10:44:49.206Z",
-      "lastUpdateDate": "2024-06-17T10:56:38.495Z",
-      "createdBy": "Logged in user"
-    },
-    {
-      "id": "71608",
-      "name": "zxc",
-      "color": "#ff0000",
-      "description": "zx",
-      "createDate": "2024-06-17T10:56:51.016Z",
-      "lastUpdateDate": "2024-06-17T11:24:04.940Z",
-      "createdBy": "Logged in user"
-    },
-    {
-      "id": "6953",
-      "name": "asdasdasd",
-      "color": "#6b6b6b",
-      "description": "asdasdas",
-      "createDate": "2024-06-17T10:57:37.235Z",
-      "lastUpdateDate": "2024-06-17T11:56:03.923Z",
-      "createdBy": "Logged in user"
-    },
-    {
-      "id": "78743",
-      "name": "123123",
-      "color": "#000000",
-      "description": "zxcz",
-      "createDate": "2024-06-17T11:27:28.035Z",
-      "lastUpdateDate": "2024-06-17T12:05:43.136Z",
-      "createdBy": "Logged in user"
-    },
-    {
-      "id": "7536",
-      "name": "Dror",
+      "id": "335",
+      "name": "sad",
       "color": "#000000",
       "description": "asdas",
-      "createDate": "2024-06-17T12:04:46.705Z",
-      "lastUpdateDate": "2024-06-17T12:07:31.843Z",
+      "createDate": "2024-06-17T12:45:35.782Z",
+      "lastUpdateDate": "2024-06-17T12:45:35.782Z",
+      "createdBy": "Logged in user"
+    },
+    {
+      "id": "62188",
+      "name": "zxcz",
+      "color": "#000000",
+      "description": "zxczx",
+      "createDate": "2024-06-17T12:45:39.835Z",
+      "lastUpdateDate": "2024-06-17T12:45:39.835Z",
+      "createdBy": "Logged in user"
+    },
+    {
+      "id": "78026",
+      "name": "Hay Mati..",
+      "color": "#00ffaa",
+      "description": "Cya man.",
+      "createDate": "2024-06-17T12:55:17.629Z",
+      "lastUpdateDate": "2024-06-17T12:57:07.389Z",
       "createdBy": "Logged in user"
     }
   ]

@@ -56,13 +56,14 @@ export class NewItemPopupComponent {
   }
 
   save() {
+    console.log(this.popupProps)
     if (this.popupProps[0] === 'new') {
-      this.item.id = Math.floor(Math.random() * 100000)
+      this.item.id = Math.floor(Math.random() * 100000).toString()
       this.store.dispatch(addItem({ item: this.item }))
-    } else {
     }
-
-    this.store.dispatch(updateItem({ inputdata: this.item }))
+    if (this.popupProps[0] === 'edit') {
+      this.store.dispatch(updateItem({ inputdata: this.item }))
+    }
     this.store.dispatch(loadItem())
     setTimeout(() => {
       this.closePopup()

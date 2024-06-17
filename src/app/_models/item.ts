@@ -1,5 +1,5 @@
 export interface Item {
-  id?: number | null
+  id?: number | string | null
   name: string | null
   color: string | null
   description?: string | null
