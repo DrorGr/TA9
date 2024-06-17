@@ -1,7 +1,7 @@
 <div class="app-search-bar">
   <ng-icon class="icon" *ngIf="displayIcon" name="bootstrapSearch"></ng-icon>
   <input
-    (keyup)="updateSearchValue($event)"
+    (input)="updateSearchValue($event)"
     class="input"
     type="text"
     placeholder="Search..."

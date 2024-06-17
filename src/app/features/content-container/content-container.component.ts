@@ -22,7 +22,8 @@ export class ContentContainerComponent implements OnInit {
     private SearchBarService: SearchBarService,
   ) {}
 
-  @Input() listItems!: Item[]
+  listItems!: Item[]
+  originalListItems!: Item[]
   searchValue: string = ''
   viewState: string = 'List'
   sortType: string = 'createDate'
@@ -51,6 +52,7 @@ export class ContentContainerComponent implements OnInit {
     this.store.select(geItemsList).subscribe(item => {
       if (item) {
         this.listItems = item
+        this.originalListItems = item
         this.sortItems('createDate', true)
         this.pagination.totalRecords = this.listItems.length
       }
@@ -153,7 +155,7 @@ export class ContentContainerComponent implements OnInit {
 
   filterItems(searchValue: string) {
     if (searchValue) {
-      this.listItems = this.listItems.filter(item =>
+      this.listItems = this.originalListItems.filter(item =>
         item.name.toLowerCase().startsWith(searchValue.toLowerCase()),
       )
       this.paginate(null, this.viewState)

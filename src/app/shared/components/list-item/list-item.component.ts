@@ -12,8 +12,12 @@ import { Item } from '../../../_models/item'
 export class ListItemComponent {
   @Input() item!: Item
   @Output() deleteClick = new EventEmitter()
+  @Output() editClick = new EventEmitter()
 
   onDeleteClick() {
     this.deleteClick.emit(this.item)
+  }
+  onEditClick() {
+    this.editClick.emit(this.item)
   }
 }

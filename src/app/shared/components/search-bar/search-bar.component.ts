@@ -1,4 +1,4 @@
-import { Component } from '@angular/core'
+import { Component, Input, SimpleChanges } from '@angular/core'
 import { CommonModule } from '@angular/common'
 import { NgIconComponent, provideIcons } from '@ng-icons/core'
 import { bootstrapSearch } from '@ng-icons/bootstrap-icons'
@@ -14,9 +14,11 @@ import { SearchBarService } from './search-bar.component.service'
 })
 export class SearchBarComponent {
   constructor(private searchBarService: SearchBarService) {}
+  @Input() _searchValue: string = ''
 
   updateSearchValue(event: any) {
-    this.searchBarService.setSearchValue(event.target.value)
+    this._searchValue = event.target.value
+    this.searchBarService.setSearchValue(this._searchValue)
   }
 
   placeHolder = 'Search for a movie...'

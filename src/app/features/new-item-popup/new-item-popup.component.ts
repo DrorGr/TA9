@@ -14,7 +14,6 @@ import { Store } from '@ngrx/store'
   styleUrl: './new-item-popup.component.scss',
 })
 export class NewItemPopupComponent implements OnInit {
-  private _id = 0
   isHidden!: boolean
   item!: Item
   constructor(private store: Store) {
@@ -24,11 +23,7 @@ export class NewItemPopupComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.store.select(geItemsList).subscribe(list => {
-      return (this._id = list.length + 1)
-    })
     this.item = {
-      id: this._id,
       name: '',
       color: '#000000',
       description: '',
@@ -54,6 +49,7 @@ export class NewItemPopupComponent implements OnInit {
   }
 
   save() {
+    this.item.id = Math.floor(Math.random() * 100000)
     this.store.dispatch(addItem({ item: this.item }))
     this.store.dispatch(loadItem())
     this.closePopup()
