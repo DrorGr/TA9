@@ -5,12 +5,7 @@ import { TileItemComponent } from '../../shared/components/tile-item/tile-item.c
 import { Store } from '@ngrx/store'
 import { UtilsBarComponentService } from '../../shared/components/utils-bar/utils-bar.component.service'
 import { Item } from '../../_models/item'
-import {
-  deleteItem,
-  emptyAction,
-  loadItem,
-  updateItem,
-} from '../../store/items/items.actions'
+import { deleteItem } from '../../store/items/items.actions'
 import { geItemsList } from '../../store/items/items.selector'
 import { SearchBarService } from '../../shared/components/search-bar/search-bar.component.service'
 

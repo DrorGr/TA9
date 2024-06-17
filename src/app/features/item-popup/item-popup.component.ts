@@ -56,7 +56,6 @@ export class NewItemPopupComponent {
   }
 
   save() {
-    console.log(this.popupProps)
     if (this.popupProps[0] === 'new') {
       this.item.id = Math.floor(Math.random() * 100000).toString()
       this.store.dispatch(addItem({ item: this.item }))
